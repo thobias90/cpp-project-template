@@ -14,7 +14,10 @@ include(AddGitSubmodule)
 
 add_git_submodule(external/json)
 add_subdirectory(configured)
+add_subdirectory(external)
 add_subdirectory(src)
+
+option(COMPILE_EXECUTABLE "Wheter to compile the executable" ON)
 if (COMPILE_EXECUTABLE)
   add_subdirectory(app)
 else()
