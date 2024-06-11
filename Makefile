@@ -9,7 +9,7 @@ SRC_DIR = $(shell pwd)
 all: clean build
 
 dependency:
-	cd build && cmake .. --graphviz=graph.dot && dot -Tpng graph.dot -o graphImage.png
+	cd $(BUILD_DIR) && cmake $(SRC_DIR) --graphviz=graph.dot && dot -Tpng graph.dot -o graphImage.png
 
 clean:
 	@echo "Removing existing build directory..."
