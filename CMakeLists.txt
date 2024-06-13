@@ -56,6 +56,9 @@ FetchContent_MakeAvailable(Catch2)
 add_subdirectory(configured)
 add_subdirectory(external)
 add_subdirectory(src)
+add_subdirectory(tests)
+
+option(ENABLE_TEST "Enable Unit Test Build" ON)
 
 option(COMPILE_EXECUTABLE "Wheter to compile the executable" ON)
 if (COMPILE_EXECUTABLE)
