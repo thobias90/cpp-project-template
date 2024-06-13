@@ -4,6 +4,10 @@
 
 #include "my_lib.h"
 
+/**
+ * @brief Print hello world and tests the json lib
+ * 
+ */
 void print_hello_world()
 {
   std::cout << "Hello world\n";
