@@ -6,6 +6,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+option(ENABLE_TEST "Enable Unit Test Build" OFF)
+
+option(ENABLE_WARNINGS "Enable Warnings" ON)
+option(ENABLE_WARNINGS_AS_ERRORS "Enable Warnings as Errors" ON)
+
 set(LIBRARY_NAME Library)
 set(EXECUTABLE_NAME Executable)
 
@@ -13,7 +18,9 @@ set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
 include(AddGitSubmodule)
 include(FetchContent)
 
-option(ENABLE_TEST "Enable Unit Test Build" ON)
+if(ENABLE_WARNINGS)
+  include(Warnings)
+endif()
 
 FetchContent_Declare(
   nlohmann_json
