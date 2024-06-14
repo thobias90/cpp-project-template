@@ -19,3 +19,8 @@ build:
 	@echo "Creating build directory and running CMake for Lib and Main"
 	mkdir -p $(BUILD_DIR)
 	cd $(BUILD_DIR) && cmake $(SRC_DIR) && make
+
+test:
+	@echo "Building tests"
+	mkdir -p ${BUILD_DIR}
+	cd ${BUILD_DIR} && cmake -DENABLE_TEST=ON ${SRC_DIR} && make

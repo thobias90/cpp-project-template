@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN // This tells Catch to provide main
 
-#include <catch2/catch.hpp>
+#include <catch2/catch_test_macros.hpp>
 #include "my_lib.h"
 
 TEST_CASE("Factorials are computed", "[factorial]")
